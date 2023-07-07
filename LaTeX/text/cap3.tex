@@ -1,0 +1,29 @@
+\section{Problemas Sanduíche}
+
+O problema sanduíche é uma generelização do problema de reconhecimento de classes de grafos, onde se quer determinar se, dados dois grafos $G_1$ e $G_2$, sendo $G_2$ um supergrafo de $G_1$, se existe algum grafo $G'$ que possua a mesma propriedade dos grafos $G_1$ e $G_2$, uma propriedade $\Pi$ pode ser, por exemplo, se um grafo pertence a classe dos grafos cordais ou threshold.  
+
+O problema foi introduzido por \cite{golumbic:95} formalmente da seguinte forma:
+
+\hspace{2.0cm} \underline{\textsc{Problema sanduíche para uma propriedade ${\Pi}$}} 
+
+\hspace{2.0cm} $Entradas$: Grafos $G_1 = (V, E_1)$ e $G_2 = (V, E_2)$, onde $G_2 > G_1$, $E_2 \subseteq E_1$.
+
+\hspace{2.0cm} $Saida$: Existe algum grafo $G_s$, onde $E_1 \subseteq E_s \subseteq E_2$ que satisfaça a propriedade $\Pi$?
+
+Quando a entrada para o problema sanduíche onde $G_1 = G_2$, o problema torna-se um problema de reconhecimento, pois ambos os grafos possuem o mesmo conjunto de arestas, portanto, não é do interesse tratar esse caso específico.
+
+Dizemos que o conjunto de vértices $E(\bar{G_2})$ são o conjunto de vértices proibidos para $G'$, $E(G_1)$ sendo o conjunto de arestas forçadas, ou seja, que obrigatoriamente o grafo encontrado deverá conter esse conjunto de arestas e o conjunto $E(G_2)$ de arestas opcionais \cite{fernandasbpo:2012}.
+
+Existe algoritmo que resolva em tempo polinomial o problema sanduíche para a classe dos grafos split, para a classe dos grafos $(k,l)$, que são uma generalização do problema de particionamento, o problema torna-se $NP$-completo para $k \geq 3$ ou $l \geq 3$, assim como seu problema de reconhecimento \cite{golumbic:95}. 
+
+Há também outros problemas sanduíches que são resolvidos em tempo polinomial, que são os casos dos grafos $threshold$ e os $cografos$, como mostrado por Kaplan, Golumbic e Shamir \cite{golumbic:95}. Na classe dos grafos $P_4$-$sparse$, Dantas, Klein, Mello e Morgana \cite{sulamita2009} apresentaram um algoritmo para resolver problema em tempo polinomial, os grafos $P_4$-$sparse$ pertencem a classe dos $cografos$, essa classe possui um algoritmo de reconhecimento em tempo polinomial utilizando o método de decomposição modular. Sua complexidade para o problema sanduíche é $O(\mid V \mid ^2( \mid V \mid + \mid E^1 \mid + \mid \bar{E^2} \mid ))$, como a proposta desse trabalho não é tratar especificamente desse problema, o algoritmo pode ser consultado no artigo citado. 
+
+Alguns problemas sanduíches aplicados às classes de grafos que pertencem a classe dos grafos perfeitos estão na classe dos problemas $NP$-completos como a classe dos grafos $cordais$, fortemente cordais e permutação \cite{golumbic:95}. 
+
+Classes de grafos que tenham seu problema de reconhecimento na classe dos problemas $NP$-completos, o seu problema sanduíche correspondente também pertencerá a essa classe de problemas \cite{fernanda:2016}.
+
+\subsection{Grafos Cordais e Split}
+
+O problema sanduíche para grafos split possui um algoritmo em tempo polinomial com a complexidade de $O(\mid V \mid + \mid E^1 \mid + \mid \bar{E^2} \mid)$ já proposto por Golumbic, Kaplan e Shamir \cite{golumbic:95}.   
+
+É conhecido que os grafos cordais são uma subclasse dos grafos $perfeitos$, alguns grafos que são subclasse dos grafos $perfeitos$ tem seu respectivo problema sanduíche na classe dos problemas $NP$-$completos$, grafos como de permutação, comparabilidade também pertencem a essa classe \cite{golumbic:95}. Alguns trabalhos tem sido desenvolvidos com o intuito de encontrar algoritmos eficientes e prova de $NP$-$completude$ para algumas classes específicas dos grafos $cordais$, como por exemplo o trabalho desenvolvido por Couto \cite{fernandasbpo:2012}, onde se mostrou que os grafos $(2,1)$-$cordais$ pertencem a classe dos problemas $NP$-$completos$ com o intuito de se desenvolver um algoritmo para o problema sanduíche, nesse trabalho, as ferramentas utilizadas para essa prova através das definições dos grafos cordais não foram satisfatórias e foram utilizados recursos da classe dos grafos $fortemente cordais$ para esse objetivo. 

@@ -1,0 +1,5 @@
+\section{Algoritmo de Força Bruta}
+
+O algoritmo de força bruta que será apresentado nesse relatório estará em pseudo-código, descrevendo brevemente a estratégia adotada para elaboração do algoritmo. 
+
+É conhecido que um problema sanduíche busca encontrar um grafo $G_s = (V, E_s)$ em $G_1 = (V, E_1)$ e $G_2 = (V, E_2)$ cujo conjunto de arestas $E_s$ seja $E_1 \subseteq E_s \subseteq E_2$, com essa definição, chegamos a conclusão que $E_1$ é um conjunto de arestas forçadas do grafo sanduíche e $E_2$ as arestas opcionais. O algoritmo iniciará com a verificação trivial da entrada de $E_1$ se possui a propriedade $cordal$, caso possua, então existe um grafo com essa propriedade, caso não exista, aleatoriamente serão incrementados vértices adjacentes que pertencem a $E_2$ no conjunto $E_s$, que contém todas as arestas $E_1$. Um detalhe a respeito dessa implementação é que nunca deverá selecionar arestas de vértices sem vizinhança com o grafo $G'$, ou seja, é proibido que se gere um grafo com componentes desconexas, após a seleção dos vértices, será testada a propriedade $cordal$ no grafo gerado, caso não, o processo se repete aleatoriamente.

@@ -1,0 +1,70 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% How to use writeLaTeX: 
+%
+% You edit the source code here on the left, and the preview on the
+% right shows you the result within a few seconds.
+%
+% Bookmark this page and share the URL with your co-authors. They can
+% edit at the same time!
+%
+% You can upload figures, bibliographies, custom classes and
+% styles using the files menu.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article}
+
+\usepackage{sbc-template}
+
+\usepackage{graphicx,url}
+
+%\usepackage[brazil]{babel}   
+\usepackage[utf8]{inputenc}  
+
+\usepackage[portuguese]{babel}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+
+        
+\sloppy
+
+\title{Problema Sanduíche aplicado às classes de grafos cordais e split}
+
+\author{Renan G. da Silva\inst{1}, Natália F. da Silva\inst{1}}
+
+
+\address{Departamento de Ciência da Computação -- Universidade Federal Rural \\do Rio de Janeiro
+  (UFRRJ)\\
+  \email{\ renan.gdsilva@gmail.com, natalia-321s@outlook.com}
+}
+
+\begin{document} 
+
+\maketitle
+     
+\begin{resumo} 
+  Este trabalho tem como objetivo apresentar e descrever formalmente o problema sanduíche, as classes dos grafos cordais e split e como ambas as classes elas são aplicadas ao problema proposto.
+\end{resumo}
+
+\begin{abstract}
+This work aims to present and describe formally the Sandwich Problem, the chordal and split graph classes and how either classes are applied in purpose problem.
+\end{abstract}
+
+\input{text/cap1}
+
+\input{text/cap2}
+
+\input{text/cap3}
+
+%\input{text/cap4}
+
+\input{text/cap5}
+
+\section{Referências Bibliográficas}
+
+\bibliographystyle{sbc}
+\bibliography{sbc-template}
+
+\end{document}
